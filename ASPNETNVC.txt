@@ -1,0 +1,41 @@
+sürekli yeni html üretiyo c# arkadan  IIS e iletileni ASP NET tarafından işleniyo
+muratbasern.com domain alan adı ve serverdan hosting alan almak gerekiyor 2
+www subdomain herkeste var değişebilir domainden sonra path ? parametreler(sırası)
+https ve kilit işareti varsa güvenli ssl sertifikalı kullanıcının girdiği datayı şifreleyip
+kullanıyor
+MVC Model View Controller model:verilerin tutulduğu classlar
+view:html css	controller:business class model ve view ı çağıran
+
+domain:contrroler:action url kısmı böyle	action methodları çağırıyor
+add view controller adı neyse onun altına cshtml ekliyor razer view
+add controller çalışması için add view yapılmalı
+viewı shared da ekleyebilir her viewı olmayan controller için
+hot reload on filesave html kodları için değişiklikleri kapatıp açmadan bakabilirsin
+program.cs de pattern ile url nin formatı değiştirilebilir
+layout tüm html-css shared dosyası altında
+
+ul>li>p>lorem > altında anlamında tab ile yazdırıyoruz
+ctrl+k+d kodları düzenle
+p>lorem3 3 kelimelik lorem getirir
+p.box>lorem3 classı box olan p#box id si box olan classı oluşturur
+.row>.col div default
+yanyana yapmak için + ve aynı seviyede bir tane daha yazmak için ^
+
+col-4 col-2 tarzında yazmak daha mantıklı
+
+margin kenarlar m-0 hiçbir kenardan boşluk verme 0 dan 5 e kadar birim boşluk
+mt mb top bottom m bütün kenarlar ms me start end sağ sol yerine oldu
+mx my x ekseni y ekseni x start end y top bottom ı tekte verme
+
+padding özellikleri aynı
+
+col-12 col-sm-6 col-md-4 en küçük çözünürlüklerde col 12 en büyük çöz col-md-4
+responsive tepki veriyor ekran büyüklüklerine göre elle büyütüp küçültme ya da telefon tablet
+
+bootstrap sayfasından card alert her istenen tasarım yapılabilir
+bütün checkbox textbox mail password date input type ="  "
+
+offset-4 tam ortalama div class text-center ortalamak için 2.yöntem
+açarken httpget dosya gönderirken httppost request response olark
+
+
