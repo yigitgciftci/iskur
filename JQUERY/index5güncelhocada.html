@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- .row>.col>(h1.display-4>lorem3)+hr -->
+      <div class="row mb-3">
+        <div class="col mb-3">
+          <h1 class="display-4">Lorem, ipsum dolor.</h1>
+          <hr />
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col mb-3">
+          <input id="txt" type="text" />
+        </div>
+        <div class="row mb-3">
+          <div class="col mb-3">
+            <button id="btnSend" class="btn btn-primary" type="button">
+              Gönder
+            </button>
+          </div>
+        </div>
+        <div class="col mb-3">
+          <ul class="form-group">
+            <li class="form-group-item">
+              <span>safd</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      var list = [];
+
+      $("#btnSend").click(function () {
+        var txt = $("#txt").text();
+        var li =$("<li 'class=list-group-item'</li>");
+        li.text(txt);
+        var ul = $("ul");
+        ul.append(li)
+      });
+
+    //     var item = {
+    //       text: txt,
+    //     };
+
+    //     list.push(item);
+
+    //     loadList();
+    //   });
+    //   function loadList() {
+    //        [0];
+    //         ul.innerHTML = "";
+
+    //         for (var i = 0; i < list.length; i++) {
+    //             var item = list[i];
+
+    //             var html =
+    //                 `<li class="list-group-item">
+    //                     <span>${i.text}</span>
+    //                 </li>`;
+
+    //             ul.innerHTML += html;
+    //             //ul.appendChild(li);
+    //         }
+    //     }
+    </script>
+  </body>
+</html>
