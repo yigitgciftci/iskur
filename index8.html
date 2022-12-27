@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- .row>.col>(h1.display-4>lorem3)+hr -->
+      <div class="row mb-3">
+        <div class="col">
+          <h1 class="display-4">Lorem, ipsum dolor.</h1>
+          <hr />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 mb-3">
+          <div class="form-group mb-3">
+            <label for="inputlg">Search</label>
+            <input
+              class="form-control input-lg mb-3"
+              id="inputlg"
+              type="text"
+            />
+          </div>
+        </div>
+        <div class="col">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+            quisquam modi omnis vero, nihil id nobis odio ullam dignissimos
+            deserunt, ipsam beatae reprehenderit recusandae vitae natus labore
+            quaerat hic quia nostrum rem quae minima blanditiis? Deleniti,
+            laudantium ipsa commodi animi laborum totam deserunt aut, culpa
+            obcaecati doloremque modi quasi vero veniam reiciendis ratione magni
+            id?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).on("input", function () {
+        $("#inputlg").keyup(function () {
+          var value = $("#inputlg").val();
+          var news = $(`<span style="background-color:yellow"></span>`);
+          $("p").replace(value, news);
+        });
+      });
+    </script>
+  </body>
+</html>
