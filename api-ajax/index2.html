@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- .row>.col>(h1.display-4>lorem3)+hr -->
+      <div class="row mb-3">
+        <div class="col">
+          <h1 class="display-4">Lorem, ipsum dolor.</h1>
+          <hr />
+        </div>
+      </div>
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-primary" type="button" onclick="loadData()">
+          Get Data
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="col mt-2">
+          <select class="form-select" id="list" onchange="loadTodos()"></select>
+
+          <h2 class="mt-2">Ajax Operations 2</h2>
+          <hr>
+          <ul id="todos" class="list-group mt-2">
+            <!-- <li class="list-group-item">dsasadf</li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- https://jsonplaceholder.typicode.com/todos -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function loadData() {
+        $.get(
+          "https://jsonplaceholder.typicode.com/users",
+          function (res, status) {
+            var users = res;
+            for (var i = 0; i < users.length; i++) {
+              var user = users[i];
+              var item = $(`<option value="${user.id}">${user.name}</option>`);
+              $("#list").append(item);
+            }
+          });
+      }
+      function loadTodos() {
+        $("#todos").empty();
+        var userid = $("#list").val();
+        var url = `https://jsonplaceholder.typicode.com/users/${userid}/todos`;
+        $.get(url,function (res, status) {
+            var todos = res;
+            for (var i = 0; i < todos.length; i++) {
+                var todo = todos[i];
+                var item = $(`<li class="list-group-item">${todo.title}</li>`);
+                $("#todos").append(item);
+            }
+        })
+    };
+    </script>
+  </body>
+</html>
